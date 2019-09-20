@@ -1,19 +1,17 @@
 /**
  * Created by yang on 2019/9/10.
  */
-import _ from 'lodash';
+// import _ from 'lodash';
+import { cube } from './math';
 import printMe from './print.js';
 import './styles.css';
 
 function component() {
-  var element = document.createElement('div');
-  var btn = document.createElement('button');
+  var element = document.createElement('pre');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  btn.innerHTML = 'you you';
-  btn.onclick = printMe;
-  element.appendChild(btn);
+  element.innerHTML = [
+    'Hello', '5 cube is equal to ' + cube(5)
+  ].join('\n\n');
 
   return element;
 }
